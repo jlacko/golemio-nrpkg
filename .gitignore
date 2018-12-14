@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# tajné heslo k API
+token.rds 
+
+# soubory s pracovními daty 
+data/* 
