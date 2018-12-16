@@ -8,3 +8,4 @@ token.rds
 
 # soubory s pracovními daty 
 data/* 
+!parking-praha-2018-12-14-08:57:31.csv
