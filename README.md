@@ -25,3 +25,13 @@ Pražská data jsou open, ale stažení vyžaduje klíč a [tedy registraci](htt
 <p align="center">
   <img src="https://github.com/jlacko/golemio-nrpkg/blob/master/img/prumerka.png?raw=true" alt="průměrná cena stání"/>
 </p>
+
+<hr>
+
+# Technicky:
+
+Kód je rozdělen do 4 logických částí, které jsou v samostatných souborech:  
+- `0-get-token.R` se má na starost autorizaci a vygeneruje token  
+- `1-get-data.R` stahuje surová data z relevantního API a uloží je jako csvčko do `/data`  
+- `2-digest-shapefile.R` připraví z GeoJSONu parkovacích zón v `/data-raw` erkově přítulnější formát + vytvoří pomocné geometrické prvky jako jsou obrysy Prahy a relevantní kus Vltavy; tento soubor stačí spustit jednou  
+- `3-plot-yesterday.R` vytvoří z dat v `/data` obrázky do `/img`   
